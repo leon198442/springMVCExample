@@ -24,7 +24,7 @@ public class StringUtilsTest {
 
 	@Test
 	public void testSplitStringString() {
-		String input = "aa_bb_cc";
+		String input = "a_bb_cc";
 		String[] result = StringUtils.split(input, "_",3);
 		String[] expect = {"aa", "bb","cc"};
 		for (int i =0;i<result.length;i++) {
