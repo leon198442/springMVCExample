@@ -34,7 +34,7 @@ public class syncChargePileStatus {
 	//
 	// }
 
-	@Scheduled(cron = "0/15 * * * * ?") // trigger every 15sec
+	@Scheduled(cron = "0/5 * * * * ?") // trigger every 5sec
 
 	public void updateChargePileInfo() {
 
@@ -67,7 +67,7 @@ public class syncChargePileStatus {
 
 	}
 
-	@Scheduled(cron = "0 * * * * ?") // trigger every 15sec
+	@Scheduled(cron = "0/15 * * * * ?") // trigger every 15sec
 
 	public void updateChargePileStatus() {
 

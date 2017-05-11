@@ -138,14 +138,13 @@ public class ChargePileInfoController {
 		if (!StringUtils.isEmpty(pid)) {
 			Date date = new Date();
 			String d = request.getParameter("date");
+			SimpleDateFormat dateFmt = new SimpleDateFormat("yyyy-MM-dd");
 			if (StringUtils.isEmpty(d)) {
-				SimpleDateFormat dateFmt = new SimpleDateFormat("yyyy-MM-dd");
 				d = dateFmt.format(date);
 			}
 
-			DateFormat df = DateFormat.getDateInstance();
 			try {
-				date = df.parse(d);
+				date = dateFmt.parse(d);
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
